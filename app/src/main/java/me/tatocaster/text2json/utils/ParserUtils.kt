@@ -15,7 +15,7 @@ fun String.parseLinks(): MutableList<Url> {
     val foundItems = mutableListOf<Url>()
     val m = Pattern.compile("((https?)://[\\w-]+\\.[a-z]+)").matcher(this)
     while (m.find()) {
-        foundItems.add(Url(m.group(0), m.group(0)))
+        foundItems.add(Url("", m.group(0)))
     }
     return foundItems
 }

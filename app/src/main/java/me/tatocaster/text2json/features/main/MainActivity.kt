@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
         setupScopeGraph(App.getAppContext(this).appComponent)
 
-        action_parse.setOnClickListener({
+        action_parse.setOnClickListener({ v ->
+            v.isEnabled = false
+            v.isClickable = false
             mainPresenter.parseText(main_input.text.toString())
         })
     }
@@ -29,6 +31,8 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     override fun showMessage(s: String) {
         main_result.text = s
+        action_parse.isEnabled = true
+        action_parse.isClickable = true
     }
 
     override fun onDestroy() {

@@ -77,7 +77,7 @@ class ParserUtilsUnitTest {
 
     @Test
     fun parseLinks_isCorrectResult() {
-        Assert.assertEquals("http://google.com".parseLinks()[0].url, "http://google.com")
+        Assert.assertEquals("http://google.com".parseLinks()[0], "http://google.com")
     }
 
     @Test

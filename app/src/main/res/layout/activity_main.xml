@@ -39,7 +39,7 @@
         android:background="@android:color/transparent"
         android:hint="Text"
         android:padding="8dp"
-        android:text="asdads @poop :poop: https://tatocaster.me"
+        android:text="Heya, @boo :highfive:, look at https://google.com and https://tatocaster.me"
         android:textSize="12sp" />
 
     <TextView
