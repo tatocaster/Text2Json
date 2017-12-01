@@ -11,6 +11,11 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val mainPresenter = MainPresenter()
+
+        action_parse.setOnClickListener({
+            main_result.text = mainPresenter.parseText(main_input.text.toString())
+        })
     }
 
 
