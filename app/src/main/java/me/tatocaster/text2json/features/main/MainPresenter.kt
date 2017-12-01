@@ -5,14 +5,14 @@ import me.tatocaster.text2json.entity.ParsedResponse
 import me.tatocaster.text2json.utils.parseEmojis
 import me.tatocaster.text2json.utils.parseLinks
 import me.tatocaster.text2json.utils.parseMentions
+import javax.inject.Inject
 
 
 /**
  * Created by tatocaster on 12/1/17.
  */
-class MainPresenter : MainContract.Presenter {
+class MainPresenter @Inject constructor(private var view: MainContract.View) : MainContract.Presenter {
     override fun onDestroy() {
-
     }
 
     override fun parseText(input: String): String {
