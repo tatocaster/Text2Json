@@ -1,7 +1,6 @@
 package me.tatocaster.text2json.features.main
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import me.tatocaster.text2json.App
@@ -23,13 +22,13 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         setupScopeGraph(App.getAppContext(this).appComponent)
 
         action_parse.setOnClickListener({
-            main_result.text = mainPresenter.parseText(main_input.text.toString())
+            mainPresenter.parseText(main_input.text.toString())
         })
     }
 
 
     override fun showMessage(s: String) {
-        Snackbar.make(main_wrapper, s, Snackbar.LENGTH_SHORT).show()
+        main_result.text = s
     }
 
     override fun onDestroy() {

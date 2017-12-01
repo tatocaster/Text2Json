@@ -9,7 +9,7 @@ class MainContract {
     }
 
     interface Presenter {
-        fun parseText(input: String): String
+        fun parseText(input: String)
 
         fun onDestroy()
     }

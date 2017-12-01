@@ -15,12 +15,13 @@ class MainPresenter @Inject constructor(private var view: MainContract.View) : M
     override fun onDestroy() {
     }
 
-    override fun parseText(input: String): String {
+    override fun parseText(input: String) {
         val links = input.parseLinks()
         val mentions = input.parseMentions()
         val emojis = input.parseEmojis()
         val parsedResponse = ParsedResponse(emojis, links, mentions)
         val gson = GsonBuilder().setPrettyPrinting().create()
-        return gson.toJson(parsedResponse)
+
+        view.showMessage(gson.toJson(parsedResponse))
     }
 }

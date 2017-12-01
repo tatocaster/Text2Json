@@ -32,15 +32,15 @@
     </RelativeLayout>
 
     <EditText
+        android:id="@+id/main_input"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:hint="Text"
-        android:id="@+id/main_input"
         android:padding="8dp"
         android:text="asdads @poop :poop: https://gooasda.com"
-        android:textSize="11sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/main_result"
@@ -48,5 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
-        android:padding="4dp" />
+        android:padding="4dp"
+        android:selectAllOnFocus="true"
+        android:textIsSelectable="true" />
 </LinearLayout>
